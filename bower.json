@@ -1,0 +1,27 @@
+{
+  "name": "nestle",
+  "version": "1.1.0",
+  "homepage": "https://github.com/roblafeve/nestle",
+  "authors": [
+    "Rob LaFeve <rob@cremalab.com>"
+  ],
+  "description": "A CSS layout system",
+  "main": "index.sass",
+  "keywords": [
+    "css",
+    "grid",
+    "nesting",
+    "nested",
+    "hierarchy",
+    "white",
+    "space"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}
