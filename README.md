@@ -6,7 +6,7 @@ Nestle is a white space generator built to use with a CSS preprocessor. It makes
 ## Installation
 
 ```bash
-$ bower install nestle --save
+$ bower install sass-nestle --save
 ```
 
 ## Setup
@@ -14,7 +14,7 @@ $ bower install nestle --save
 Be sure to import Nestle into your `main.sass` or equivalent file (at the top, preferably). Adjust the path of this import depending on your setup. If you're using Express be sure to require nestle
 
 ```Stylus
-@import 'nestle'
+@import 'sass-nestle'
 ```
 
 ## Configuration
