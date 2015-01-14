@@ -53,9 +53,10 @@
 // Column
 .col
   display: table-cell
-  height: 100%
   @extend .vertical-align
 
+  &.height-max
+    height: 100%
   &.max
     width: 100%
   &.min
