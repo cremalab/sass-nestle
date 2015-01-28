@@ -1,7 +1,4 @@
 // Nest Generator
-$devColor: teal
-$devUnits: false
-
 @function pow($number, $exp)
   $value: 1
   @if $exp > 0
@@ -12,21 +9,7 @@ $devUnits: false
       $value: $value / $number
   @return $value
 
-=nestle($ratio: 1.5, $shift: -2, $steps: 6, $dev: false, $bg: $devColor)
-
-  @if $dev
-    [class*='pad']
-      background-color: rgba($bg, 0.2)
-      @if $devUnits
-        &:before
-          @if size == 1
-            color: red
-          @else
-            color: black
-          content: "" + size
-          display: inline-block
-          line-height: 0.65
-          margin-bottom: size
+=nestle($ratio: 1.5, $shift: -2, $steps: 6)
 
   @for $step from 1 through ($steps)
     $rank: $steps - ($step - $shift)
