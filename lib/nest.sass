@@ -9,51 +9,50 @@
       $value: $value / $number
   @return $value
 
-=nestle($ratio: 1.5, $shift: -2, $steps: 6)
+=nestle($ratio: 1.5, $shift: -2, $steps: 6, $include_wrapped: false)
 
   @for $step from 1 through ($steps)
     $rank: $steps - ($step - $shift)
-    $size: pow($ratio, $rank)
+    $size: pow($ratio, $rank) + rem
 
     .pad-#{$step}
-      padding:        $size + em
+      padding:        $size
     .pad-h-#{$step}
-      padding-right:  $size + em
-      padding-left:   $size + em
+      padding-right:  $size
+      padding-left:   $size
     .pad-v-#{$step}
-      padding-top:    $size + em
-      padding-bottom: $size + em
+      padding-top:    $size
+      padding-bottom: $size
     .pad-t-#{$step}
-      padding-top:    $size + em
+      padding-top:    $size
     .pad-r-#{$step}
-      padding-right:  $size + em
+      padding-right:  $size
     .pad-b-#{$step}
-      padding-bottom: $size + em
+      padding-bottom: $size
     .pad-l-#{$step}
-      padding-left:   $size + em
+      padding-left:   $size
 
     .nest-#{$step}
 
       > *, 
       &.sub-all *
-        margin-top: $size + em
-        margin-top: $size + rem
+        margin-top: $size
 
       > .grid, 
       &.sub-all .grid
         
         &.wrapped
-          margin: ($size + em) 0 0
+          margin: $size 0 0
 
         &.spaced
-          border-spacing: $size + em 0
-          margin: ($size + em) (-$size + em) 0
+          border-spacing: $size 0
+          margin: $size (-$size) 0
 
           &.wrapped
-            margin: ($size/2 + em) (-$size/2 + em) (-$size/2 + em) !important
+            margin: ($size/2) (-$size/2) (-$size/2) !important
             &:first-child
-              margin-top: (-$size/2 + em) !important
+              margin-top: (-$size/2) !important
             & > .grid-items
               & > *
-                padding: ($size/2) + em
+                padding: ($size/2)
                 margin: 0 !important
