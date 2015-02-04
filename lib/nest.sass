@@ -41,13 +41,15 @@
       > .grid, 
       &.sub-all .grid
         
-        &.wrapped
-          margin: $size 0 0
+        @if $include_wrapped
+          &.wrapped
+            margin: $size 0 0
 
         &.spaced
           border-spacing: $size 0
           margin: $size (-$size) 0
 
+        @if $include_wrapped
           &.wrapped
             margin: ($size/2) (-$size/2) (-$size/2) !important
             &:first-child
