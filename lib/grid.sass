@@ -1,47 +1,7 @@
-// Global Grid Modifiers
-
-// Col/Row Dimensions
-$minimum_dimension: 0.1px
-$maximum_dimension: 100%
-
-.h-min
-  width:  $minimum_dimension
-
-.h-max
-  width:  $maximum_dimension
-
-.v-min
-  height: $minimum_dimension
-
-.v-max
-  height: $maximum_dimension
-
-
-// Vertical Alignment
-.align-top
-  vertical-align: top
-
-.align-middle
-  vertical-align: middle
-
-.align-bottom
-  vertical-align: bottom
-
-
-// Horizontal Alignment
-.align-left
-  text-align: left
-
-.align-center
-  text-align: center
-
-.align-right
-  text-align: right
-
-
 // Grid
 .grid
   border-spacing: 0
+  vertical-align: top
 
   // Layout
   &.fixed
@@ -102,3 +62,44 @@ $maximum_dimension: 100%
 .row
   display: table-row
   @extend  %vertical-align
+
+
+// Global Grid Modifiers
+
+// Col/Row Dimensions
+$minimum_dimension: 0.1px
+$maximum_dimension: 100%
+
+.h-min
+  width:  $minimum_dimension
+
+.h-max
+  width:  $maximum_dimension
+
+.v-min
+  height: $minimum_dimension
+
+.v-max
+  height: $maximum_dimension
+
+
+// Vertical Alignment
+.align-top
+  vertical-align: top
+
+.align-middle
+  vertical-align: middle
+
+.align-bottom
+  vertical-align: bottom
+
+
+// Horizontal Alignment
+.align-left
+  text-align: left
+
+.align-center
+  text-align: center
+
+.align-right
+  text-align: right
