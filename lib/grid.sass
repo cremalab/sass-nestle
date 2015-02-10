@@ -6,26 +6,35 @@ $maximum_dimension: 100%
 
 .h-min
   width:  $minimum_dimension
+
 .h-max
   width:  $maximum_dimension
+
 .v-min
   height: $minimum_dimension
+
 .v-max
   height: $maximum_dimension
-  
+
+
 // Vertical Alignment
 .align-top
   vertical-align: top
+
 .align-middle
   vertical-align: middle
+
 .align-bottom
   vertical-align: bottom
-  
+
+
 // Horizontal Alignment
 .align-left
   text-align: left
+
 .align-center
   text-align: center
+
 .align-right
   text-align: right
 
@@ -37,8 +46,10 @@ $maximum_dimension: 100%
   // Layout
   &.fixed
     table-layout: fixed
+
   &.inline
     display: inline-block
+    vertical-align: top
 
   // Variants
   &.wrapped
@@ -55,9 +66,11 @@ $maximum_dimension: 100%
         margin:    0
         height:    auto
 
+
 // All children of `.grid` inherit vertical alignment
 %vertical-align
   vertical-align: inherit
+
 
 // Grid Items
 .grid-items
@@ -67,16 +80,23 @@ $maximum_dimension: 100%
   @extend         %vertical-align
   width:          100%
   height:         100%
+  
+  // Addresses inline-block vertical alignment quirk
+  .align-middle > &
+    vertical-align: middle
+
 
 // Column
 .col
   display: table-cell
   @extend  %vertical-align
 
+
 // Rows
 .rows
   display: table-row-group
   @extend  %vertical-align
+
 
 // Row
 .row
