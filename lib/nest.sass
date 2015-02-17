@@ -47,11 +47,14 @@
 
         &.spaced
           border-spacing: ($size + rem) 0
-          margin: ($size + rem) (-$size + rem) 0
+          margin-right: (-$size + rem)
+          margin-left: (-$size + rem)
 
         &.spaced-hv
           border-spacing: ($size + rem)
-          margin: (-$size + rem) (-$size + rem) !important
+          margin: 0 (-$size + rem) (-$size + rem) !important
+          &:first-child
+            margin: (-$size + rem) (-$size + rem) !important
 
         @if $include_wrapped
           &.wrapped
