@@ -14,47 +14,50 @@
   @for $step from 1 through ($steps)
     $rank: $steps - ($step - $shift)
     $size: pow($ratio, $rank)
+    $size-unit: $size + rem
 
     .pad-#{$step}
-      padding:        ($size + rem)
+      padding:        $size-unit
     .pad-h-#{$step}
-      padding-right:  ($size + rem)
-      padding-left:   ($size + rem)
+      padding-right:  $size-unit
+      padding-left:   $size-unit
     .pad-v-#{$step}
-      padding-top:    ($size + rem)
-      padding-bottom: ($size + rem)
+      padding-top:    $size-unit
+      padding-bottom: $size-unit
     .pad-t-#{$step}
-      padding-top:    ($size + rem)
+      padding-top:    $size-unit
     .pad-r-#{$step}
-      padding-right:  ($size + rem)
+      padding-right:  $size-unit
     .pad-b-#{$step}
-      padding-bottom: ($size + rem)
+      padding-bottom: $size-unit
     .pad-l-#{$step}
-      padding-left:   ($size + rem)
+      padding-left:   $size-unit
 
     .nest-#{$step}
 
       > *, 
       &.sub-all *
-        margin-top: ($size + rem)
+        margin-top: $size-unit
 
       > .grid, 
       &.sub-all .grid
         
         @if $include_wrapped
           &.wrapped
-            margin: ($size + rem) 0 0
+            margin: $size-unit 0 0
 
         &.spaced
-          border-spacing: ($size + rem) 0
-          margin-right: (-$size + rem)
-          margin-left: (-$size + rem)
+          border-spacing: $size-unit 0
+          margin-right: -($size-unit)
+          margin-left: -($size-unit)
 
         &.spaced-hv
-          border-spacing: ($size + rem)
-          margin: 0 (-$size + rem) (-$size + rem) !important
+          height: calc(100% + #{($size * 2) + rem})
+          border-spacing: $size-unit
+          margin: -($size-unit) !important
           &:first-child
-            margin: (-$size + rem) (-$size + rem) !important
+            & > .grid-items
+              margin-top: -($size * 2) + rem
 
         @if $include_wrapped
           &.wrapped
