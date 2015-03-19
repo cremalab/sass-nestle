@@ -50,22 +50,11 @@
           border-spacing: $size-unit 0
           margin-right: -($size-unit)
           margin-left: -($size-unit)
-          & > .grid-items
-            & > .row,
-            & > .col
-              margin-top: $size-unit
 
         &.spaced-hv
           height: calc(100% + #{($size * 2) + rem})
           border-spacing: $size-unit
           margin: -($size-unit) !important
-          & > .grid-items
-            & > .row,
-            & > .col
-              margin-top: $size-unit
-          &:first-child
-            & > .grid-items
-              margin-top: -($size * 2) + rem
 
         @if $include_wrapped
           &.wrapped
